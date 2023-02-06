@@ -173,6 +173,16 @@ func (view *WebView) MoveToCenter() {
 	win.MoveWindow(view.handle, x, y, width, height, false)
 }
 
+//九戒 设置窗口大小
+func (view *WebView) SetSize(w, h int32) {
+	rect := &win.RECT{}
+	win.GetWindowRect(view.handle, rect)
+	x := rect.Left
+	y := rect.Top
+	win.MoveWindow(view.handle, x, y, w, h, false)
+
+}
+
 func (view *WebView) Move(x, y int32, relative bool) {
 	var width int32 = 0
 	var height int32 = 0
