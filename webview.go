@@ -264,6 +264,16 @@ func (view *WebView) LoadURL(url string) {
 	<-done
 }
 
+//加载HTML
+func (view *WebView) LoadHTML(html string) {
+	done := make(chan bool)
+	jobQueue <- func() {
+		C.loadHTML(view.window, C.CString(html))
+		close(done)
+	}
+	<-done
+}
+
 func (view *WebView) ShowCaption() {
 	style := win.GetWindowLongPtr(view.handle, win.GWL_STYLE)
 	win.SetWindowLongPtr(view.handle, win.GWL_STYLE, style|win.WS_CAPTION|win.WS_SYSMENU|win.WS_SIZEBOX)

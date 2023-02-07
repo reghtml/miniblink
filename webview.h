@@ -14,6 +14,8 @@ wchar_t *wcookiejar;
 wkeWebView createWebWindow(bool isTransparent, int x, int y, int width, int height);
 HWND getWindowHandle(wkeWebView window);
 void loadURL(wkeWebView window, char *url);
+//加载HTML
+void loadHTML(wkeWebView window, char *html);
 void reloadURL(wkeWebView window);
 void setWindowTitle(wkeWebView window, char *title);
 void setCspCheck(wkeWebView window, bool enable);

@@ -24,6 +24,13 @@ void loadURL(wkeWebView window, char *url)
     free(url);
 }
 
+//加载HTML
+void loadURL(wkeWebView window, char *html)
+{
+    wkeLoadHTML(window, html);
+    free(html);
+}
+
 void reloadURL(wkeWebView window)
 {
     wkeReload(window);
