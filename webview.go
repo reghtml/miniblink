@@ -3,7 +3,7 @@ package miniblink
 //#include "webview.h"
 import "C"
 import (
-	"github.com/del-xiong/miniblink/eventemitter"
+	"github.com/reghtml/miniblink/eventemitter"
 	"github.com/lxn/win"
 	"os"
 	"reflect"
