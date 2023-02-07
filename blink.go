@@ -7,17 +7,17 @@ import (
 	"fmt"
 	"github.com/elazarl/go-bindata-assetfs"
 	"github.com/lxn/win"
-	"github.com/del-xiong/miniblink/internal/devtools"
-	"github.com/del-xiong/miniblink/internal/dll"
+	"github.com/reghtml/miniblink/internal/devtools"
+	"github.com/reghtml/miniblink/internal/dll"
 	"os"
 	"path/filepath"
 	"runtime"
 )
 
-//任务队列,保证所有的API调用都在痛一个线程
+// 任务队列,保证所有的API调用都在痛一个线程
 var jobQueue = make(chan func())
 
-//初始化blink,释放并加载dll,启动调用队列
+// 初始化blink,释放并加载dll,启动调用队列
 func InitBlink() error {
 	//定义dll的路径
 	dllPath := filepath.Join(TempPath, "blink_"+runtime.GOARCH+".dll")

@@ -1,13 +1,13 @@
 # blink
-本库fork自 https://github.com/raintean/blink 并做了一些更新
+本库fork自 https://github.com/del-xiong/miniblink/  
 使用html来编写golang的GUI程序(only windows), 基于[miniblink开源库](https://github.com/weolar/miniblink49)  
 
 ## Demo
-[Demo项目地址](https://github.com/del-xiong/miniblink-example)
+[Demo项目地址](https://github.com/reghtml/miniblink-example)
 
 ## 安装
 ```bash
-go get github.com/del-xiong/miniblink
+go get github.com/reghtml/miniblink
 ```
 
 ## 快速入门教程
@@ -37,7 +37,7 @@ go get github.com/del-xiong/miniblink
 package main
 
 import (
-    "github.com/del-xiong/miniblink"
+    "github.com/reghtml/miniblink"
     "log"
 )
 
